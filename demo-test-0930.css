@@ -9,13 +9,11 @@
 	position:relative;
 	height:80%;
 	width:400px;
-	outline:3px solid purple;
 	transition-duration:0.5s;	
 	translateZ(0px);
 }
 img {
 	display:inline-block;
-	outline:1px solid pink;
 	position:absolute;
 	margin-left:35px;
 }

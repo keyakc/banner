@@ -5,7 +5,7 @@ var courses=document.getElementById("course").getElementsByTagName("a");
 var slideOffset=0;
 
 function reg(offset,n) {
-	if(Math.abs(offset)%n==0) return n;//取余和文件名差异匹配
+	if(Math.abs(offset)%n==0) return n;
 	if(offset<0){
 	return n+offset%n;
 	}else{
@@ -37,7 +37,7 @@ function picChange(n){
 	console.log("n is "+n);
 	console.log("mod(n-1,3) is "+mod(n-1,3));
 	imgs[mod(n-1,3)].style.left=(n-1)+"00%";
-	imgs[mod(n,3)].style.left=n+"00%";//中间位置→中间序号→两侧序号&两侧位置
+	imgs[mod(n,3)].style.left=n+"00%";
 	imgs[mod(n+1,3)].style.left=(n+1)+"00%";
 	//重置图样
 	imgs[mod(n-1,3)].setAttribute("src","img-2/images/work_0"+reg(n-1,5)+".jpg");

@@ -1,0 +1,42 @@
+#vis_window {
+	margin-left:200px;
+	width:450px;
+	height:500px;
+	outline:1px solid red;
+	padding-top:20px;
+}
+#translate_line {
+	position:relative;
+	height:80%;
+	width:400px;
+	outline:3px solid purple;
+	transition-duration:0.5s;	
+	translateZ(0px);
+}
+img {
+	display:inline-block;
+	outline:1px solid pink;
+	position:absolute;
+	margin-left:35px;
+}
+.slide {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#course {
+	outline:1px solid blue;
+	margin:auto;
+	width:400px;
+	text-align:center;
+}
+#course a {
+	margin:0px 5px;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	border:1px solid red;
+	text-align:center;
+	line-height:20px;
+	display:inline-block;
+}

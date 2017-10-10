@@ -4,6 +4,7 @@
 	height:350px;
 	outline:1px solid red;
 	padding-top:20px;
+	overflow: hidden;
 }
 #translate_line {
 	position:relative;

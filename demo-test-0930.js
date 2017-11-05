@@ -6,10 +6,11 @@ var coursesLength=courses.length;
 var vis_window=document.getElementById("vis_window");
 //获取 css width
 var vis_window_width=getStyle(vis_window,"width").match(/(\d+)/)[0];
-var slideOffset;//整形偏移
+var slideOffset;//整体偏移
 
+//取余和文件名差异匹配
 function reg(offset,n) {
-	if(Math.abs(offset)%n==0) return n;//取余和文件名差异匹配
+	if(Math.abs(offset)%n==0) return n;
 	if(offset<0){
 	return n+offset%n;
 	}else{
@@ -44,7 +45,7 @@ function picChange(n,T){
 	translate_line.setAttribute("style",trans);
 	//重置位置
 	img_units[mod(n-1,3)].style.left=(n-1)+"00%";
-	img_units[mod(n,3)].style.left=n+"00%";//中间位置→中间序号→两侧序号&两侧位置
+	img_units[mod(n,3)].style.left=n+"00%";
 	img_units[mod(n+1,3)].style.left=(n+1)+"00%";
 	// console.log(img_units[mod(n-1,3)].getElementsByTagName("img")[0].src);
 	//重置图样

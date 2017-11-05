@@ -1,8 +1,8 @@
 var translate_line=document.getElementById("translate_line");
 var img_units=translate_line.getElementsByTagName("div");
 var translate=document.getElementById("translate");
-var courses=document.getElementById("course").getElementsByTagName("a");
-var coursesLength=courses.length;
+var cursors=document.getElementById("cursor").getElementsByTagName("a");
+var cursorsLength=cursors.length;
 var vis_window=document.getElementById("vis_window");
 //获取 css width
 var vis_window_width=getStyle(vis_window,"width").match(/(\d+)/)[0];
@@ -34,8 +34,8 @@ var clickHandler=function(page) {
 		}
 	};
 //各页码注册事件
-for(q=1,p=coursesLength;q<=p-2;q++){
-	courses[q].onclick=clickHandler(q);
+for(q=1,p=cursorsLength;q<=p-2;q++){
+	cursors[q].onclick=clickHandler(q);
 }
 
 function picChange(n,T){
@@ -49,13 +49,13 @@ function picChange(n,T){
 	img_units[mod(n+1,3)].style.left=(n+1)+"00%";
 	// console.log(img_units[mod(n-1,3)].getElementsByTagName("img")[0].src);
 	//重置图样
-	img_units[mod(n-1,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n-1,coursesLength-2)+".jpg");	
-	img_units[mod(n,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n,coursesLength-2)+".jpg");
-	img_units[mod(n+1,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n+1,coursesLength-2)+".jpg");
-	button_class(reg(n,coursesLength-2));
+	img_units[mod(n-1,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n-1,cursorsLength-2)+".jpg");	
+	img_units[mod(n,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n,cursorsLength-2)+".jpg");
+	img_units[mod(n+1,3)].getElementsByTagName("img")[0].setAttribute("src","img-2/images/work_0"+reg(n+1,cursorsLength-2)+".jpg");
+	button_class(reg(n,cursorsLength-2));
 	slide_class(mod(n,img_units.length));
 }
-courses[coursesLength-1].onclick=function(){
+cursors[cursorsLength-1].onclick=function(){
 	//获取样式
 	var trans=translate_line.getAttribute("style");
 	slideOffset=Number(trans.slice(trans.indexOf("(")+1,trans.indexOf("%")))/100;	
@@ -65,7 +65,7 @@ courses[coursesLength-1].onclick=function(){
 	picChange(slideOffset);
 	
 }
-courses[0].onclick=function() {
+cursors[0].onclick=function() {
 	//获取样式
 	var trans=translate_line.getAttribute("style");
 	slideOffset=Number(trans.slice(trans.indexOf("(")+1,trans.indexOf("%")))/100;	
@@ -122,10 +122,10 @@ function slide_class(n) {
 }
 //按钮样式切换
 function button_class(n){
-	for(i=0;i<coursesLength;i++){
-		courses[i].className='';
+	for(i=0;i<cursorsLength;i++){
+		cursors[i].className='';
 	}
-	courses[n].className='active';	
+	cursors[n].className='active';	
 }
 // 获取元素当前样式
 	function getStyle(element,cssPropertyName){

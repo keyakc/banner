@@ -9,11 +9,17 @@
 <body>
 	<div id="vis_window">
 		<div id="translate_line" style="transform:translateX(-100%) translateZ(0px);transition:0.5s">
-			<img src="img-2/images/work_05.jpg" class="slide" style="left:0%">
-			<img src="img-2/images/work_01.jpg" class="slide" style="left:100%">
-			<img src="img-2/images/work_02.jpg" class="slide" style="left:200%">
+			<div class="slide" style="left:0%">
+			<img src="img-2/images/work_05.jpg">
+			</div>
+			<div class="slide_active" style="left:100%">
+			<img src="img-2/images/work_01.jpg">
+			</div>
+			<div class="slide" style="left:200%">
+			<img src="img-2/images/work_02.jpg">
+			</div>
 		</div>
-		<p id="intro">可拖拽</p>
+		<p id="intro">可拖拽、宽度响应</p>
 		<div id="course">
 			<a href="#">&lt</a>
 			<a href="#" class="active">1</a>
@@ -24,6 +30,7 @@
 			<a href="#">&gt</a>
 		</div>
 	</div>
+	<!-- // <script src="../util/util.js"></script> -->
 	<script src="demo-test-0930.js"></script>
 </body>
 </html>

@@ -1,33 +1,45 @@
 #vis_window {
-	margin-left:200px;
-	width:420px;
-	height:350px;
+	margin: 20px auto;
+	width:400px;
+	height:340px;
 	outline:1px solid red;
 	padding-top:20px;
-	overflow: hidden;
+	/*overflow: hidden;*/
+}
+@media screen and (max-width: 769px) {
+	#vis_window {
+		overflow:hidden;
+	}
 }
 #translate_line {
 	position:relative;
 	height:80%;
-	width:400px;
 }
-img {
-	display:inline-block;
-	position:absolute;
-	margin-left:47px;
-	box-shadow: 2px 2px 3px rgba(51,51,51,0.6);
-}
-.slide {
-	position:absolute;
-	top:0px;
-	left:0px;
-}
+	#translate_line > div {
+		position: absolute;
+		height:270px;
+		width:100%;
+	}	
+	img {
+		position: absolute;
+		left:50%;
+		top:50%;
+		transition:0.2s;
+		transform:translate(-50%,-50%) scale(0.5);
+		box-shadow: 6px 5px 4px rgba(51,51,51,0.6);
+	}
+	.slide_active img{
+		transform:translate(-50%,-50%) scale(0.7);
+	}
+
 #intro{
 	margin:10px auto;
 	text-align: center;
 	font: 16px bold;
 }
 #course {
+	position:relative;
+	z-index: 2;
 	margin:auto;
 	width:400px;
 	text-align:center;

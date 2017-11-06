@@ -6,11 +6,6 @@
 	padding-top:20px;
 	/*overflow: hidden;*/
 }
-@media screen and (max-width: 769px) {
-	#vis_window {
-		overflow:hidden;
-	}
-}
 #translate_line {
 	position:relative;
 	height:80%;
@@ -67,3 +62,19 @@
 		border: 1px solid white;
 		color:#fff;
 	}
+@media screen and (max-width: 800px) {
+	#vis_window {
+		overflow:hidden;
+	}
+	img {
+		position: absolute;
+		left:50%;
+		top:50%;
+		transition:0.2s;
+		transform:translate(-50%,-50%) scale(1);
+		box-shadow: 6px 5px 4px rgba(51,51,51,0.6);
+	}
+	.slide_active img{
+		transform:translate(-50%,-50%) scale(1);
+	}
+}

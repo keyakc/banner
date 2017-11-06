@@ -44,6 +44,7 @@ function picChange(n,T){
 	var trans="transform:translateX("+transOffset+"00%) translateZ(0px);transition:"+T+"s;";
 	translate_line.setAttribute("style",trans);
 	//重置位置
+	console.log("n= "+n)
 	img_units[mod(n-1,3)].style.left=(n-1)+"00%";
 	img_units[mod(n,3)].style.left=n+"00%";
 	img_units[mod(n+1,3)].style.left=(n+1)+"00%";
@@ -58,10 +59,10 @@ function picChange(n,T){
 cursors[cursorsLength-1].onclick=function(){
 	//获取样式
 	var trans=translate_line.getAttribute("style");
-	slideOffset=Number(trans.slice(trans.indexOf("(")+1,trans.indexOf("%")))/100;	
+	slideOffset=Number(trans.slice(trans.indexOf("(")+1,trans.indexOf("%")))/100;
+	console.log(slideOffset)	
 	slideOffset*=-1;
 	slideOffset++;
-
 	picChange(slideOffset);
 	
 }
